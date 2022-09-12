@@ -1,0 +1,126 @@
+firstname = input('Your First name: ')
+lastname = input('Your Last name: ')
+age = input('How old are you?: ')
+location = input('Where do you live?: ')
+print ('Your First name is: ' + firstname + ' Your Last name is: ' + lastname + ' Your age is: ' + age + ' You live in: ' + location)
+
+
+
+a = int(input('Enter 1st number: '))
+b = int(input('Enter 2nd number: '))
+c = int(input('Enter 3th number: '))
+if a>a2:
+    if a>c:
+        z=a
+else:
+    if b>c:
+        z=b
+    else:
+        z=c
+if a<a2:
+    if a<c:
+        q=a
+else:
+    if b<c:
+        q=b
+    else:
+        q=c
+print('Biggest number is: ' + str(z))
+print('Smallest number is: ' + str(q))
+
+
+
+def is_alive(health):
+    if health > 0:
+        return True
+    else:
+        return False
+
+def main():
+    print(is_alive(0))
+
+if name == 'main':
+    main()
+
+
+
+def season_events(n):
+    events = {
+        "winter": "winter. White snow fell outside the window",
+        "spring": "spring. Birds sang beautiful songs",
+        "summer": "summer. The sun shone brighter than ever",
+        "autumn": "autumn. The harvest was incredible"
+    }
+    if 2 >= n > 0 or n ==12:
+        print("You were born in ", events['winter'])
+    elif 5 >= n > 3:
+        print("You were born in ", events['spring'])
+    elif 8 >= n > 5:
+        print("You were born in ", events['summer'])
+    elif 11 >= n > 8:
+        print("You were born in ", events['autumn'])
+    else:
+        print("You need to enter real number of your month")
+
+
+def main():
+    season_events(int(input()))
+
+if name == 'main':
+    main()
+
+
+
+
+
+ def pass_check(passw):
+    sumbl = ['*', '#', '_']
+    if len(passw)==8:
+        if any(char.isupper() for char in passw):
+            if any(char.islower() for char in passw):
+                if any(char.isdigit() for char in passw):
+                    if any(char in sumbl for char in passw):
+                        print("The password is perfect")
+                else:
+                    print('Password should have at least one numeral')
+            else:
+                print('Password should have at least one lowercase letter')
+        else:
+            print('Password should have at least one uppercase letter')
+    else:
+        print("Password is need to be a 8 char len")
+def main():
+    pass_check(input())
+
+if name == 'main':
+    main()
+
+
+import math
+def main():
+    a = int(input())
+    b = int(input())
+    h = int(input())
+    s = ((pow(a,2)+b)*h)/(2*(a-b)+4)
+    print(s)
+if name == 'main':
+    main()
+
+
+import math
+def main():
+    x = int(input())
+    y = int(input())
+    h = (math.sqrt(
+        (math.cos(2 * y) + math.sin(4 * y) + math.sqrt(math.exp(x) + math.exp(-x)))
+    ) / (
+                 (pow(
+                     (math.exp(-x) + math.exp(x)), 3)
+                 ) * pow(
+             (math.sin(4 * y) + math.cos(2 * y) - 2), 2)
+         ))
+    print(h)
+
+
+if name == 'main':
+    main()
