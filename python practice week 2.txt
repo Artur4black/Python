@@ -1,0 +1,197 @@
+Practice work 5
+Tasks for independent work:
+
+Task 1
+s=input('enter a string ')
+a=0
+splits = s.split()
+print(splits)
+for split in splits:
+    if split[0] == "E" or split[0] == "e":
+        a=a+1
+        print(a)
+
+Task 2
+s=input('enter a string ')
+print(s.replace(":","%"))
+
+Task 3
+from operator import *
+s = input("Enter a string")
+print(countOf(s,"."), s.replace("."," "))
+
+Task 4
+from operator import *
+s = input("Enter a string")
+print(countOf(s,"a"), s.replace("a","o"), len(s))
+
+Task 5
+s = input("Enter a string")
+print(s.lower())
+
+Task 6
+from operator import *
+s = input("Enter a string")
+print(countOf(s,"a"), s.replace("a"," "))
+
+Task 8
+s = input ("enter a sentence")
+word_list = s.split()
+print(len(word_list))
+
+Task 9
+def word_count(s):
+   s = input ("enter a sentence")
+   count=dict()
+   words = s.split()
+   for word in words:
+    if word in count:
+        count[word]+1
+    else:
+        count[word]=1
+    return count
+print(word_count(s))
+
+Task 10
+s=input("enter a sentence")
+print(s.title())
+
+Task 12
+s= input("enter the sentence")
+for a in s.split():
+    if a.endswith("I"):
+     print(a)
+
+
+Independent work week 2
+
+Task 1
+s=[1, 2, 3, 4, 5, 6]
+s.reverse()
+print(s)
+
+Task 2
+s=[1, 2]
+s[0], s[-1]=s[-1], s[0]
+print(s)
+
+Task 3
+s= [1, 2, 3, 4, 5]
+for i in s:
+    print(i, end=' ')  
+
+Task 4
+s= [100, 200, 50, 350, 80, 120]
+Ln=s[0]
+for number in s:
+    if number>Ln:
+        Ln=number
+a=len(s)
+print(Ln/a)
+
+
+Task 5
+s= [12, 5, 1, 88, 16, 112]
+s.sort(reverse=True)
+print(s)
+
+
+Practice work 6
+ Task 1 (1)
+a=[]
+n=int(input())
+for i in range(n):
+    a.append(int(input()))
+Ln=a[0]
+for number in a:
+    if number>Ln:
+        Ln=number
+a.sort(reverse=True)
+print(a)
+
+Task 1 (2)
+import statistics
+a=[]
+n=int(input())
+for i in range(n):
+    a.append(int(input()))
+x=statistics.mean(a)
+print(a.replace("0","x"))
+
+Task 2 (1)
+a=[]
+n=int(input())
+for i in range(n):
+    a.append(int(input()))
+r=min(a)
+i=a.index(r)
+print(i)
+
+Task 2 (2)
+m = [int(x) for x in input().split()]
+lst2 = []
+lst3 = []
+for i in m:
+     if i < 0:
+         lst3.append(i)
+     elif i > 0:
+         lst2.append(i)
+print(lst2)
+print(lst3)
+
+Task 3 (1)
+d = [int(x) for x in input().split()]
+Lst1=[]
+for i in d:
+     if i%2 != 0:
+         Lst1.append(i)
+print(Lst1)
+print(sum(Lst1))
+
+Task 3 (2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
