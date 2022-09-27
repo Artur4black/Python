@@ -1,0 +1,290 @@
+Task 1 (1)
+import math
+chk=str(input("enter the name of shape= "))
+if chk=="rectangle":
+        a=float(input("Enter a side "))
+        b=float(input("Enter b side "))
+        s=a*b
+        print(s)
+elif chk=="Circle":
+        r=float(input("Enter radius"))
+        s=math.pi*(r*r)
+        print(s)
+
+Task 1 (2)
+import statistics
+a=[1, 2, 3, 4, 5, 6, 7]
+b=[2, 4, 6, 8, 10, 12, 14]
+c=[1, 3, 5, 7, 9, 11, 13]
+print(statistics.mean(a), sum(a))
+print(statistics.mean(b), sum(b))
+print(statistics.mean(c), sum(c))
+
+Task 2 (1)
+import math
+a=float(input("The size of one side "))
+s=(math.sqrt(3)/4)*(a*a)
+print(6*s)
+
+Task 2 (2)
+import math
+a=float(input("The size of one side "))
+b=float(input("The size of one side "))
+s=(a*b)
+print(3*s)
+
+Task 3 (1)
+import math
+a=float(input("The first side"))
+h=float(input("The height"))
+k=float(input("The first side"))
+h2=float(input("The height"))
+s=((a*h)/2)
+s2=((k*h2)/2)
+if s>s2:
+    print(s,s2,"First triangle is bigger")
+else:
+    print(s,s2,"Second triangle is bigger")
+
+Task 3 (2)
+str = "bad"
+a=''.join(sorted(str))
+print(a)
+
+Task 4 (1)
+a=float(input("first number"))
+b=float(input("second number"))
+c=a/b
+print(c)
+
+Task 5 (1)
+a=float(input("first number"))
+b=float(input("second number"))
+c=a-b
+print(c)
+
+Task 5 (2)
+s = int(input("Введите целое число: "))
+print("Результат:", end = " ")
+for i in range(s - 1, 1, -1):
+    if (s % i == 0):
+        print(i, end = " ")
+
+Task 6 (1)
+import math
+s = int(input("Введите целое число: "))
+a = int(input("Введите целое число: "))
+print(math.gcd(s,a))
+Lcm=((a*s)/(math.gcd(s,a)))
+print(Lcm)
+
+Task 6 (2)
+import math
+a=float(input("first side"))
+b=float(input("first side"))
+c=float(input("first side"))
+d=float(input("first side"))
+s=(a+b+c+d)/2
+print(s)
+
+Task 7 (1)
+import math
+a=float(input("first side"))
+b=float(input("second side"))
+h=float(input("height"))
+s=(1/2)*(h)*(a+b)
+print(s)
+
+Task 7 (2)
+def bin_to_dec(digit):
+    dlina=len(digit)
+    print (dlina)
+    chislo_dec=0
+    for i in range(0, dlina):
+        chislo_dec=chislo_dec+int(digit[i])*(2**(dlina-i-1))
+    return chislo_dec
+a=input(" asd00")
+print(a,bin_to_dec(a))
+
+Task 8 (1)
+def check(num):
+    for d in str(num):
+        if d == '0' or num % int(d):
+            return False
+    return True
+
+
+for i in range(1, int(input()) + 1):
+    if check(i):
+        print(i)
+
+Task 8 (2)
+a=[]
+n= int(input("Enter the number of elements in list:"))
+for x in range(0,n):
+    element=int(input("Enter element" + str(x+1) + ":"))
+    a.append(element)
+temp=a[0]
+a[0]=a[n-1]
+a[n-1]=temp
+print("New list is:")
+print(a)
+
+Task 9 (1)
+n = int(input("Enter the number: "))
+sum=0
+while n>0:
+    b=n % 10
+    sum=sum+b
+    n=n//10
+print(sum)
+
+Task 9 (2)
+import math
+import statistics
+a = [int(x) for x in input("Enter first array: ").split()]
+b = [int(x) for x in input("Enter second array: ").split()]
+c = [int(x) for x in input("Enter third array: ").split()]
+print(math.prod(a), statistics.mean(a))
+print(math.prod(b), statistics.mean(b))
+print(math.prod(c), statistics.mean(c))
+
+def task102(s):
+    return s[::-1]
+
+
+def task111(a):
+    if a >= 2:
+        for i in range(a, 2 * a):
+            if i + 2 < 2 * a:
+                print(i, " ", i + 2)
+    else:
+        print("int should be greater or equal to 2")
+
+
+def task112(a, b):
+    max1 = 0
+    max2 = 0
+    for row in a:
+        for cell in row:
+            if cell > max1:
+                max1 = cell
+    for row in b:
+        for cell in row:
+            if cell > max2:
+                max2 = cell
+
+    for i in range(len(b)):
+        for j in range(len(b[i])):
+            if b[i][j] == max2:
+                b[i][j] = max1
+
+    for i in range(len(a)):
+        for j in range(len(a[i])):
+            if a[i][j] == max1:
+                a[i][j] = max2
+    return a, b
+
+def dsum(j):
+    i = 1
+    divsum = 0
+    while i <= j:
+        if j % i == 0 and i != j:
+            divsum += i
+        i = i + 1
+    return divsum
+
+def task121(n):
+    for j in range(1,n+1):
+        if j == dsum(dsum(j)):
+            print(j,dsum(j))
+
+
+def task131(n):
+    for j in range(0,n):
+        dsum = 0
+        for i in range(len(str(j))):
+            dsum += (j // 10 ** i % 10)**len(str(j))
+        if dsum == j:
+            print(j)
+
+def task141(a,b):
+    divmax = 0
+    divmaxi = 0
+    for j in range(a,b):
+        i = 1
+        divsum = 0
+        while i <= j:
+            if j % i == 0:
+                divsum += 1
+            i = i + 1
+        if divmax < divsum:
+            divmax = divsum
+            divmaxi = j
+
+    return divmax,divmaxi
+
+def task151(n):
+    for num in range(1,n+1):
+        for i in range(2, num):
+            if (num % i) == 0:
+                break
+        else:
+            if str(bin(num)[2:].zfill(8)) != str(bin(num)[2:].zfill(8))[::-1]:
+                print(str(bin(num)[2:].zfill(8)),str(bin(num)[2:].zfill(8))[::-1],num )
+
+# task 10.2
+print(task102(str(input("input str "))))
+
+# task 11.1
+task111(int(input("input int ")))
+
+# task 11.2
+a = [[1, 2, 3, 21], [4, 5, 6], [7, 8, 9]]
+print(len(a))
+b = [[10, 12, 13], [14, 15, 16], [17, 18, 19]]
+print(task112(a, b))
+
+
+# # task 12.1
+task121(10000)
+
+Rabota s faiilami
+1.Файл — это всего лишь набор данных, сохраненный в виде последовательности битов на компьютере.
+2.Имена состоят из символов прописные и латинские буквы
+3.Переменные предназначены для хранения данных
+4.r=открыть файл для чтения
+  w=открыть файл для записи
+  x=создать файл
+  а=открыть файл для записи не удаляя новые данные без удаления существующих
+  в=бинарный режим
+  t=текстовый режим
+  +=открывает файл для обновления
+5.import random
+i = 0
+lst = []
+while i<10:
+    number = random.randint(0, 101) 
+    lst = lst + [number]
+    i = i+1
+
+print("lst = ", lst)
+f = open('file.txt', 'wt')
+
+
+s = str(len(lst)) 
+f.write(s + '\n') 
+
+
+for i in lst:
+    s = str(i)
+    f.write(s + ' ')
+
+
+f.close()
+
+
+
+
+
+
