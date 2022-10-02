@@ -1,0 +1,65 @@
+https://github.com/Artur4black/Python
+1.
+
+import math
+class Rectangle:
+
+    def init(self, color="green", width=10, height=10, diagonal=14.1):
+        self.color = color
+        self.width = width
+        self.height = height
+        self.diagonal = self.diagonal()
+
+    def square(self):
+        return self.width * self.height
+
+    def diagonal(self):
+        self.diagonal = math.sqrt(pow(self.width,2) + pow(self.height,2))
+        return self.diagonal
+
+
+rect1 = Rectangle()
+print(rect1.color)
+print(rect1.square())
+print(rect1.diagonal)
+rect1 = Rectangle("yellow", 35, 10)
+print(rect1.color)
+print(rect1.square())
+print(rect1.diagonal)
+2.
+class Name:
+    def __init__(self, first_name, last_name):
+        first_name = first_name.lower().capitalize()
+        last_name = last_name.lower().capitalize()
+        self.first_name = first_name
+        self.last_name = last_name
+        self.full_name = first_name + " " + last_name
+3.
+class Calculator:
+    def init(self):
+        self.x = 0
+        self.y = 0
+
+    @staticmethod
+    def add(x, y):
+        return x + y
+
+    @staticmethod
+    def subtract(x, y):
+        return x - y
+
+    @staticmethod
+    def mult(x, y):
+        return x * y
+
+    @staticmethod
+    def div(x, y):
+        return x / y
+
+
+calk = Calculator
+print(calk.add(5, 6))
+print(calk.subtract(5, 6))
+print(calk.mult(5, 6))
+print(calk.div(5, 6))
+
